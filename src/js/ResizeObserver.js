@@ -1,10 +1,3 @@
-(function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-    typeof define === 'function' && define.amd ? define(factory) :
-    (global.ResizeObserver = factory());
-}(this, (function () {
-'use strict';
-
 /**
  * A collection of shims that provide minimal functionality of the ES6 collections.
  *
@@ -989,8 +982,8 @@ var observers = typeof WeakMap != 'undefined' ? new WeakMap() : new MapShim();
  * ResizeObserver API. Encapsulates the ResizeObserver SPI implementation
  * exposing only those methods and properties that are defined in the spec.
  */
-var ResizeObserver$1 = function(callback) {
-    if (!(this instanceof ResizeObserver$1)) {
+var ResizeObserver = function(callback) {
+    if (!(this instanceof ResizeObserver)) {
         throw new TypeError('Cannot call a class as a function');
     }
 
@@ -1006,21 +999,8 @@ var ResizeObserver$1 = function(callback) {
 
 // Expose public methods of ResizeObserver.
 ['observe', 'unobserve', 'disconnect'].forEach(function (method) {
-    ResizeObserver$1.prototype[method] = function () {
+    ResizeObserver.prototype[method] = function () {
         return (ref = observers.get(this))[method].apply(ref, arguments);
         var ref;
     };
 });
-
-var index = (function () {
-    // Export existing implementation if available.
-    if (typeof ResizeObserver != 'undefined') {
-        // eslint-disable-next-line no-undef
-        return ResizeObserver;
-    }
-
-    return ResizeObserver$1;
-})();
-
-return index;
-})));
