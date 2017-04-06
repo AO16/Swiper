@@ -1,5 +1,5 @@
 npm publish:
-  image: docker.kroger.com/library/node-git
+  image: docker.kroger.com/library/node-git-npmrc:1.0.0
   script: npm publish --registry http://npm.kroger.com
   only:
     - tags
