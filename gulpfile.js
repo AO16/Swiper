@@ -45,6 +45,7 @@
             filename: 'swiper',
             jsFiles: [
                 'src/js/wrap-start.js',
+                'src/js/ResizeObserver.js',
                 'src/js/swiper-intro.js',
                 'src/js/core.js',
                 'src/js/effects.js',
@@ -67,11 +68,11 @@
                 'src/js/get-dom-lib.js',
                 'src/js/dom-plugins.js',
                 'src/js/wrap-end.js',
-                'src/js/amd.js',
-                'src/js/ResizeObserver.js'
+                'src/js/amd.js'
             ],
             jQueryFiles : [
                 'src/js/wrap-start.js',
+                'src/js/ResizeObserver.js',
                 'src/js/swiper-intro.js',
                 'src/js/core.js',
                 'src/js/effects.js',
@@ -93,11 +94,11 @@
                 'src/js/get-dom-lib.js',
                 'src/js/dom-plugins.js',
                 'src/js/wrap-end.js',
-                'src/js/amd.js',
-                'src/js/ResizeObserver.js'
+                'src/js/amd.js'
             ],
             jQueryUMDFiles : [
                 'src/js/wrap-start-umd.js',
+                'src/js/ResizeObserver.js',
                 'src/js/swiper-intro.js',
                 'src/js/core.js',
                 'src/js/effects.js',
@@ -118,11 +119,11 @@
                 'src/js/swiper-proto.js',
                 'src/js/get-jquery.js',
                 'src/js/dom-plugins.js',
-                'src/js/wrap-end-umd.js',
-                'src/js/ResizeObserver.js'
+                'src/js/wrap-end-umd.js'
             ],
             Framework7Files : [
                 'src/js/swiper-intro-f7.js',
+                'src/js/ResizeObserver.js',
                 'src/js/core.js',
                 'src/js/effects.js',
                 'src/js/lazy-load.js',
@@ -135,8 +136,7 @@
                 'src/js/a11y.js',
                 'src/js/init.js',
                 'src/js/swiper-outro.js',
-                'src/js/swiper-proto.js',
-                'src/js/ResizeObserver.js'
+                'src/js/swiper-proto.js'
             ],
             pkg: require('./bower.json'),
             modules: require('./modules.json'),
