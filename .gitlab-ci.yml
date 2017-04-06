@@ -1,0 +1,6 @@
+npm publish:
+  image: docker.kroger.com/library/node-git
+  script: npm publish
+  only:
+    - tags
+    - triggers
