@@ -1,6 +1,6 @@
 npm publish:
   image: docker.kroger.com/library/node-git-npmrc:1.0.0
-  script: npm publish --registry http://npm.kroger.com
+  script: npm publish
   only:
     - tags
     - triggers
